@@ -1,0 +1,15 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Alt-1": "lua:microzim.h1",
+    "Alt-2": "lua:microzim.h2",
+    "Alt-3": "lua:microzim.h3",
+    "Alt-4": "lua:microzim.h4",
+    "Alt-5": "lua:microzim.h5",
+    "Alt-b": "lua:microzim.bold",
+    "Alt-h": "lua:microzim.header",
+    "Alt-i": "lua:microzim.italic",
+    "Alt-j": "lua:joinLines.joinLines",
+    "Alt-t": "lua:microzim.verbatim",
+    "Ctrl-r": "ShellMode",
+    "CtrlUnderscore": "lua:comment.comment"
+}

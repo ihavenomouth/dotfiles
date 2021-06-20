@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#dir[0]="X Z"
+dir=("SOR              /home/javier/Prof/ZIM/0_Clases/SOR")
+dir+=("Clases           /home/javier/Prof/ZIM/0_Clases")
+dir+=("Programación     /home/javier/Prof/Personal/Prog")
+dir+=("x4               /home/javier/Prof/Personal/Prog/x11/x4")
+dir+=("python           /home/javier/Prof/Personal/Prog/python")
+dir+=("micro            /home/javier/Prof/Personal/Prog/micro")
+dir+=("plugin_microzim  /home/javier/.config/micro/plug/microzim")
+
+opcion=$( whiptail --menu --title "Elige el destino" "Elija el directorio al que quiere ir" $LINES $COLUMNS $(( $LINES - 8 )) ${dir[@]} 3>&1 1>&2 2>&3 )
+
+numElem=${#dir[@]}
+
+# Array Loop
+for (( i=0; i < $numElem; i++ ))
+do
+   op=$( echo "${dir[$i]}" | cut -d " " -f1 ) 
+   if [[ $op == $opcion ]]; then
+      cd $(echo ${dir[$i]} | tr -s " " | cut -d " " -f2)
+      return
+   fi
+done
+

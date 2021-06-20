@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+figlet -C utf8 -w $COLUMNS $@

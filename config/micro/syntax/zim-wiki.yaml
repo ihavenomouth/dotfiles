@@ -1,0 +1,32 @@
+filetype: zim-wiki
+
+detect:
+    filename: "\\.txt$"
+    header: "^Content-Type: text/x-zim-wiki$"
+
+rules:
+    # Encabezados
+    - identifier: "^={1,5}.*"
+    - statement: "^====== .* ======$"
+
+    # imágenes 
+    - comment: "{{.*}}"
+
+    # '' y ''' --> código
+    - special: "''.*''"
+    - special:
+        start: "^'''"
+        end: "'''$"
+        skip: "\\\\."
+        rules: []
+
+    # negrita y cursiva
+    - constant: "\\*\\*.*\\*\\*"
+    - symbol.operator: "//.*//"
+   
+  # - constant.string:
+    # start: "\""
+    # end: "\""
+    # skip: "\\\\."
+    # rules:
+    # - constant.specialChar: "\\\\."

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+dir[0]="SOM              /home/javier/Prof/ZIM/0_Clases/SOM"
+dir[1]="SOR              /home/javier/Prof/ZIM/0_Clases/SOR"
+dir[2]="Clases           /home/javier/Prof/ZIM/0_Clases"
+dir[3]="Programación     /home/javier/Prof/Personal/Prog"
+dir[4]="x4               /home/javier/Prof/Personal/Prog/x11/x4"
+dir[5]="micro            /home/javier/Prof/Personal/Prog/micro"
+dir[6]="plugin_microzim  /home/javier/.config/micro/plug/microzim"
+dir[7]="python           /home/javier/Prof/Personal/Prog/python"
+
+hr
+numElem=${#dir[@]}
+
+# Array Loop
+for (( i=0; i < $numElem; i++ ))
+do
+   echo -n "$i ··> " 
+   echo "${dir[$i]}" | cut -d " " -f1
+done
+
+echo
+hr
+
+echo -n "Número: "
+read num
+
+cd $(echo ${dir[$num]} | tr -s " " | cut -d " " -f2)
+#export d=$(echo ${dir[$num]} | tr -s " " |cut -d " " -f2)

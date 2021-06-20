@@ -1,0 +1,9 @@
+set linenumbers
+set autoindent
+set smooth
+set tabsize 3
+
+set titlecolor blue,white
+set numbercolor white,cyan
+set guidestripe 100
+set stripecolor ,blue

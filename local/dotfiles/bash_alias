@@ -1,0 +1,14 @@
+# Definiciones de alias
+alias cd..='cd ..'
+alias cd...='cd ../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias nnn='nnn -o'
+alias cal="ncal -Mb"
+alias hrb="hr ' '"
+alias hr2="hr ' ' - ' '"
+alias goto='. gotoaux'
+alias b='. b $@'
+
+#ejemplo: pwd | cb --> al portapapeles
+alias cb='xclip -sel clip'

@@ -1,0 +1,38 @@
+conky.config={
+    update_interval=45,
+    out_to_console=false,
+    out_to_stderr=false,
+	alignment='top_right',
+	use_xft=true,
+
+double_buffer=true,
+background = true,
+own_window = true,
+own_window_class = 'Conky',
+own_window_type = 'normal', -- normal /override /desktop /dock
+own_window_transparent = true,
+own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+no_buffers=yes,
+override_utf8_locale=yes,
+own_window_argb_visual = true,
+text_buffer_size = 512,
+minimum_width = 300,
+maximum_width = 300,
+minimum_height=300,
+};
+
+conky.text = [[${color #1992d6}${alignr}${font Comfortaa:style=Regular:pixelsize=62pt}${time %H:%M}${font}${color #ffffff}
+${alignr}${font Laksaman:style=Italic:pixelsize=14pt}${time %A %d %B %Y}${font}${voffset 20}
+${alignr}CPU: ${cpu}% ~ Mem: ${mem}
+${cpugauge} ${alignr}Batería: ${battery_percent}%
+${hr}
+${font Chandas} IP: ${font} ${alignr}${color #1992d6}${addrs wlp1s0}${color #ffffff}${voffset 20}
+Espacio en disco
+${fs_bar}
+${color #1992d6}/home   ${fs_used /home}/${fs_size /home}${alignr}${fs_used_perc /home}%${color #ffffff}${voffset 20}
+${hr}${font Caveat:pixelsize=30pt}
+${texeci 600 cat /home/javier/notes.txt}
+#${diskiograph 32,300 dd80ef dd80ef}
+]]
+
+
