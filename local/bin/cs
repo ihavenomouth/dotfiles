@@ -1,10 +1,12 @@
 #!/bin/bash
 
-[[ $# -eq 0 ]] && echo -e "Opciones:\n  git\n  micro\n  vim\n  md" && exit 0
+[[ $# -eq 0 ]] && echo -e "Opciones:\n  git\n  micro\n  vim\n  md\n  tmux" && exit 0
 case $1 in
    vim) micro -readonly true  ~/.local/cheatsheet/vim_cheatsheet.md ;;
    micro) micro -readonly true  ~/.local/cheatsheet/micro_cheatsheet.md ;;
    git) micro -readonly true  ~/.local/cheatsheet/git_cheatsheet.md ;;
    md) micro -readonly true  ~/.local/cheatsheet/markdown_ejemplo.md ;;
+   tmux) micro -readonly true  ~/.local/cheatsheet/tmux_cheatsheet.md ;;
+
 esac
 
