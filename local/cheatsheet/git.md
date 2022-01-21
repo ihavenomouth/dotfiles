@@ -10,7 +10,7 @@
 
 
 `git status`  
-`git checkout HEAD ficheros`  : recuperar un fichero local eliminado desde github  
+`git checkout HEAD ficheros`  : recuperar desde el repositorio un fichero local eliminado    
 
 `git clone url`               : descarga un repositorio remoto  
 `git init repo`               : crea un repositorio local  

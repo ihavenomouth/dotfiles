@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[[ $# -eq 0 ]] && echo -e "Opciones:\n  git\n  micro\n  vim\n  md\n  tmux\n  awesome o aw" && exit 0
+[[ $# -eq 0 ]] && echo -e "Opciones:\n  git\n  micro\n  vim\n  md\n  tmux\n  awesome o aw\n  com o commands" && exit 0
 case $1 in
    vim) micro -readonly true  ~/.local/cheatsheet/vim.md ;;
    micro) micro -readonly true  ~/.local/cheatsheet/micro.md ;;
@@ -9,6 +9,8 @@ case $1 in
    tmux) micro -readonly true  ~/.local/cheatsheet/tmux.md ;;
    awesome) micro -readonly true  ~/.local/cheatsheet/awesome.md ;;
    aw) micro -readonly true  ~/.local/cheatsheet/awesome.md ;;
+   commands) micro -readonly true  ~/.local/cheatsheet/commands.md ;;
+   com) micro -readonly true  ~/.local/cheatsheet/commands.md ;;
 
 esac
 

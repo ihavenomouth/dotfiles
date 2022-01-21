@@ -17,6 +17,8 @@ Varias líneas en blanco
 \
 \
 
+Los encabezados se pueden escribir con varios # delante.
+
 
 Listas
 ------
@@ -78,5 +80,17 @@ console.log("Hola, "+ n);
 ```
 También podemos añadir algo de código en mitad de una línea. Por ejemplo
 usaremos `echo` para imprimir un mensaje en la pantalla.
+
+
+
+Enlaces e imágenes
+------------------
+
+Markdown permite insertar enlaces fácilmente:
+[Enlace a GitHub!](www.github.com)
+
+Imágenes con texto alternativo
+![Un bonito tigre](https://wiki.com/Tiger.jpg)
+
 
 

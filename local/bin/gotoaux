@@ -1,13 +1,16 @@
 #!/bin/bash
 
 #dir[0]="X Z"
-dir=("SOR              /home/javier/Prof/ZIM/0_Clases/SOR")
-dir+=("Clases           /home/javier/Prof/ZIM/0_Clases")
-dir+=("Programación     /home/javier/Prof/Personal/Prog")
+dir=("Programación     /home/javier/Prof/Personal/Prog")
+dir+=("Ansible-playbook /home/javier/Prof/Personal/Prog/ansibleplaybook")
+dir+=("Scripts          /home/javier/Prof/Personal/Prog/scripts")
 dir+=("x4               /home/javier/Prof/Personal/Prog/x11/x4")
-dir+=("python           /home/javier/Prof/Personal/Prog/python")
-dir+=("micro            /home/javier/Prof/Personal/Prog/micro")
-dir+=("plugin_microzim  /home/javier/.config/micro/plug/microzim")
+dir+=("Python           /home/javier/Prof/Personal/Prog/python")
+dir+=("Micro            /home/javier/Prof/Personal/Prog/micro")
+dir+=("Plugin_microzim  /home/javier/.config/micro/plug/microzim")
+dir+=("Clases           /home/javier/Prof/ZIM/0_Clases")
+dir+=("SOR              /home/javier/Prof/ZIM/0_Clases/SOR")
+
 
 opcion=$( whiptail --menu --title "Elige el destino" "Elija el directorio al que quiere ir" $LINES $COLUMNS $(( $LINES - 8 )) ${dir[@]} 3>&1 1>&2 2>&3 )
 

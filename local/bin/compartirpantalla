@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "------------------"
+echo
+echo "Conexión: "
+echo "vncviewer ip"
+echo
+echo "Direcciones:"
+hostname -I
+echo "-----------------"
+
+x11vnc -viewonly -shared
+
