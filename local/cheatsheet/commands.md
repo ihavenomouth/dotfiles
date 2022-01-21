@@ -2,14 +2,15 @@
 
 ## Redes
 
-`hostname -I`    : IP de la máquina
+`hostname -I`      : IP de la máquina
 `nmcli device show`         : Mucha info de redes
 `nmcli device show` + `Tab` : Muestra dispositivos
+`ss -tulp`         : equivalente a netstat -putona
 
 ## Portapapeles
 
-`pwd | xclip`    : Copia al portapales
-`ls $(xclip -o)` : Pega del portapaeles
+`pwd | xclip`      : Copia al portapales
+`ls $(xclip -o)`   : Pega del portapaeles
 
 
 ## Bash
