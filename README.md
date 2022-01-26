@@ -14,20 +14,22 @@ Este es el software que instalo en mi sistema que no suele venir preinstalado.
    * conky (muestra información sobre el fondo de pantalla)
    * flameshot (capturas de pantalla)
    * yad (interfaces gráficas desde un shell script)
+   * x11vncserver (compartir la pantalla en la red)
+   * tmux (multiplexor de la terminal)
    
 # Ficheros incluídos en este repositorio
 
 Los ficheros y directorios de este repositorio incluyen configuraciones de las herramientas que utilizo. Indico a continuación algunos de los cambios realizados y el fichero de destino. Copia sólo aquello que te resulte de interés.
 
-   * nanorc --> .nanorc
+   * .nanorc
       * configuración de nano
       * Nºs de líneas, tamaño de tab a 3, señal indicando la columna 100, colores, etc.
-   * tmux --> .tmux.conf
+   * .tmux.conf
       * Cambio Ctrl+b por Ctrl+a
       * Se divide el panel con Ctrl+a / o Ctrl+a -
       * Se entra en modo copy con Ctrl+a Espacio, en este modo se selecciona pulsando espacio y se copia con Intro.
       * Se rotan los *layouts*  con Ctrl+A AvPág.
-   * bashrc --> .bashrc
+   * .bashrc
       * Cambio el prompt
       * Función para iniciar nnn con n y que al salir nos *deje* en el directorio en el que estábamos
       * Añado el contenido del fichero bash_alias
@@ -52,6 +54,8 @@ Los ficheros y directorios de este repositorio incluyen configuraciones de las h
          * bin/mergepdf (usa ghostscript para unir pdfs)
          * bin/trad (usa trans para traducciones rápidas y concisas desde la terminal)
          * bin/zim2md (exporta un fichero en el formato de zim-wiki al de markdown)
+         * bin/compartirpantalla (comparte la pantalla actual por vnc, para las clases)
+         * bin/cecho (un echo con algo de color)
    * config --> .config
       * conky (2 ficheros de configuración, ambos leen notas de ~/notes.txt)
          * conky.conf (información en el centro)
@@ -68,7 +72,7 @@ Los ficheros y directorios de este repositorio incluyen configuraciones de las h
       * nnn
       * zim
          * style.conf (cambio del horrible esquema de color por defecto)
-         * Notebool.list (cambio de la ubicación de mi bloc de notas9
+         * Notebook.list (cambio de la ubicación de mi bloc de notas)
      
  
  

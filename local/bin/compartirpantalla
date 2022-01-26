@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "------------------"
-echo
-echo "Conexión: "
-echo "vncviewer ip"
-echo
-echo "Direcciones:"
-hostname -I
-echo "-----------------"
+cecho bc "╔═════════════════"
+cecho bc "│                 "
+cecho bc "│ Conexión: "
+cecho i  "│ vncviewer ip"
+cecho bc "│"
+cecho bc "│ Direcciones:"
+cecho info "$( hostname -I | tr " " "\n" | column -c80 )"
+cecho bc "╚══════════════════"
 
 x11vnc -viewonly -shared
 
