@@ -1,0 +1,68 @@
+#!/bin/bash
+
+if [ $# -lt 2 ];then
+   echo "Uso: cecho COLOR mensaje"
+   echo
+   echo "COLOR:"
+   echo "  warning: amarillo cursiva y etiqueta"
+   echo "  danger : rojo cursiva y etiqueta"
+   echo "  info   : celeste cursivo y etiqueta"
+   echo "  i      : celeste"
+   echo "  w      : amarillo "
+   echo "  d      : rojo "
+   
+   echo "  bl bbl : negro"
+   echo "  b bb   : azul"
+   echo "  c bc   : celeste"
+   echo "  y by   : amarillo"
+   echo "  r br   : rojo"
+   echo "  g bg   : verde"
+   echo "  m bm   : magenta"
+   echo "  wh bwh : blanco"
+   exit 1
+fi
+
+
+bl='\033[30m' #negro
+bbl='\033[0;30;1m' 
+r='\033[31m'
+br='\033[0;31;1m'
+lr='\033[1;31m'
+g='\033[32m'
+bg='\033[0;32;1m'
+y='\033[33m'
+by='\033[0;33;1m'
+b='\033[34m'
+bb='\033[0;34;1m'
+m='\033[35m'
+bm='\033[0;35;1m'
+c='\033[36m'
+bc='\033[0;36;1m'
+wh='\033[37m'
+bwh='\033[0;37;1m'
+
+#3 = cursiva
+#1 = negrita
+#4 = subrayado
+#5 = blink
+#7 = inverso
+#9 = tachado
+
+info='\033[1;36;7mInfo:\033[0m \033[1;36;3m'
+warning='\033[1;33;7mWarning:\033[0m \033[1;33;3m'
+danger='\033[1;31;7mDanger:\033[0m \033[1;31;3m'
+
+i='\033[1;36m'
+w='\033[1;33m'
+d='\033[1;31m'
+
+#redirección de variables: si $1 es "c", será como poner $c
+echo -en "${!1}"
+shift 
+echo -e $@'\033[0m'
+exit 0
+
+
+#echo -e '\033[34m'$@'\033[0m'
+
+

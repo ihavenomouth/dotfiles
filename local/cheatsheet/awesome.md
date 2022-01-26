@@ -43,4 +43,15 @@ Los tags por defecto son 9, yo los he cambiado a sólo 3 (línea 193)
 ## theme.lua
 En la línea 278 modifico el ancho del menú: `theme.menu_width  = dpi(350)`
 
+En la línea 111 cambio el tamaño del texto:  
+`theme.font          = theme.gtk.font_family .. ' ' .. 12`  
+
+En la línea 251 cambio la línea para añadir un poco menos de color gris en la brra de *tags* que está vacía (el 0.2).
+```
+theme.taglist_fg_empty = mix(
+    theme.gtk.menubar_bg_color,
+    theme.gtk.header_button_fg_color, 0.2
+)
+```
+
 
