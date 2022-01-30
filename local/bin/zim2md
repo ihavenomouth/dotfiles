@@ -1,4 +1,34 @@
 #!/bin/bash
 
+if [ "$1" == "--help" ];then
+   echo "Convierte una página de un cuaderno Zim a Markdown."
+   echo "Uso: zim [-o fichero.md ] página"
+   echo
+   echo "Parámetros:"
+   echo "   -o fichero.md   : indica el fichero markdown al que se convertirá"
+   echo "   --help          : muestra esta ayuda"
+   echo
+   echo "Si no indicamos un fichero de salida se guardará en ~/Documentos/salida.md"
+   echo "Debemos indicar la ruta del fichero Zim ej: ./Documento.txt"
+   exit 0
+fi
+
+if [ "$1" == "-o" ];then
+   [ $# -ne 3 ] && echo "Error: faltan parámetros (usa --help para ver la ayuda)." && exit 1
+   salida=$2
+   pagina=$(dirname $3)"/"$(basename $3)
+   [ -d "$salida" ] && echo "Error: $salida es un directorio" && exit
+   
+else
+   salida='~/Documentos/salida.md'
+   pagina=$(dirname $1)"/"$(basename $1)
+fi
+
 #zim --export --output=./salida.txt --overwrite --format=markdown ~/Prof/ZIM/1_Personal/Programación/Git.txt
-zim --export --output=./salida.txt --overwrite --format=markdown $*
+zim --export --output=$salida --overwrite --format=markdown $pagina
+
+if [ $? -eq 0 ];then
+   echo "Se ha guardado $pagina en $salida"
+else
+   echo "Ocurrió un error al exportar."
+fi

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo "scale=3; $@" | bc -l
+
+w3m "https://google.com/search?q=$*"

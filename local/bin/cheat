@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# El -R del less es para que muestre correctamente los colores
+curl cheat.sh/$1 2>/dev/null | less -R
