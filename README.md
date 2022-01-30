@@ -38,6 +38,12 @@ Los ficheros y directorios de este repositorio incluyen configuraciones de las h
       * cheatsheet (ficheros con algunos trucos)
       * dotfiles
          * dotfiles/bash_alias (alias para usar más cómodamente la terminal)
+            * cd.., cd..., .., ...
+            * cal (muestra el calendario como debe ser mostrado)
+            * hrb y hr (muestran líneas en la terminal)
+            * car --> cat (mi error de tecleo más común)
+            * c (copia texto al portapapeles)
+            * p (pega texto del portapapeles)
          * dotfiles/bash_export (opciones para mejorar la usabilidad, recomiendo probar las opciones una a una)
             * Cambio el editor por defecto a micro
             * Fuera telemetría
@@ -45,7 +51,7 @@ Los ficheros y directorios de este repositorio incluyen configuraciones de las h
             * Mejor autocompletado en el historial de órdenes
       * bin
          * bin/b (figlet para mostrar texto grande)
-         * bin/c (bc para cálculos rápidos en la terminal)
+         * bin/calc (bc para cálculos rápidos en la terminal)
          * bin/cs (script para mostrar una cheatsheet)
          * bin/dicc (trans para traducciones desde la terminal, muestra mucha información, para algo conciso ver trad)
          * bin/g (busca en google usando w3m en la terminal)
@@ -56,6 +62,9 @@ Los ficheros y directorios de este repositorio incluyen configuraciones de las h
          * bin/zim2md (exporta un fichero en el formato de zim-wiki al de markdown)
          * bin/compartirpantalla (comparte la pantalla actual por vnc, para las clases)
          * bin/cecho (un echo con algo de color)
+         * bin/copiaf (copiar ficheros desde la terminal)
+         * bin/cortaf (cortar ficheros desde la terminal. Cuidado, es potencialmente peligroso)
+         * bin/pegaf (pegar ficheros desde la terminal)
    * config --> .config
       * conky (2 ficheros de configuración, ambos leen notas de ~/notes.txt)
          * conky.conf (información en el centro)

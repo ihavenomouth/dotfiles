@@ -10,5 +10,10 @@ alias hr2="hr ' ' - ' '"
 alias goto='. gotoaux'
 alias b='. b $@'
 
-#ejemplo: pwd | cb --> al portapapeles
-alias cb='xclip -sel clip'
+#Evitando errores de tecleo
+alias car='cat'
+
+#ejemplo: pwd | c --> al portapapeles
+alias c='xclip -sel clip'
+alias p='xclip -o -sel clip'
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+[[ $# -eq 0 ]] && echo "Corta ficheros desde la terminal" && exit 0
+[[ "$1" == "--help" ]] && echo "Pega ficheros desde la terminal" && exit 0
+
+echo "$@" | xargs xclip-cutfile
+
+if [[ $? -eq 0 ]]; then
+   cecho info "Ficheros cortados: $@"
+   cecho warning "Si no los pegas con pegaf se perderán"
+fi

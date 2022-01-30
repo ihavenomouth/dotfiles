@@ -1,0 +1,11 @@
+#!/bin/bash
+
+[[ $# -eq 0 ]] && echo "Copia ficheros desde la terminal" && exit 0
+[[ "$1" == "--help" ]] && echo "Copia ficheros desde la terminal" && exit 0
+
+echo "$@" | xargs xclip-copyfile
+
+if [[ $? -eq 0 ]]; then
+   cecho info "Ficheros copiados: $@"
+   cecho info "Pégalos con pegaf"
+fi

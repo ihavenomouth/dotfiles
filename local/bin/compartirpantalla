@@ -1,13 +1,23 @@
 #!/bin/bash
 
-cecho bc "╔═════════════════"
+cecho bc "╔══════════════════════════════════"
 cecho bc "│                 "
+cecho bc "│ Por defecto escalado al 75% "
+cecho bc "│ "
 cecho bc "│ Conexión: "
 cecho i  "│ vncviewer ip"
 cecho bc "│"
 cecho bc "│ Direcciones:"
 cecho info "$( hostname -I | tr " " "\n" | column -c80 )"
-cecho bc "╚══════════════════"
+cecho bc "╚══════════════════════════════════"
 
-x11vnc -viewonly -shared
+if [ "$1" == "--help" ];then
+   cecho w "Usa -f para que no lo escale"
+   exit 0
+fi
 
+if [ "$1" == "-f" ];then
+   x11vnc -viewonly -shared
+else
+   x11vnc -viewonly -shared -scale 0.75
+fi

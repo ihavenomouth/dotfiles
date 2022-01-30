@@ -6,7 +6,8 @@ if [ $# -lt 2 ];then
    echo "COLOR:"
    echo "  warning: amarillo cursiva y etiqueta"
    echo "  danger : rojo cursiva y etiqueta"
-   echo "  info   : celeste cursivo y etiqueta"
+   echo "  info   : celeste cursiva y etiqueta"
+   echo "  info2  : verde cursiva y etiqueta"
    echo "  i      : celeste"
    echo "  w      : amarillo "
    echo "  d      : rojo "
@@ -49,6 +50,7 @@ bwh='\033[0;37;1m'
 #9 = tachado
 
 info='\033[1;36;7mInfo:\033[0m \033[1;36;3m'
+info2='\033[1;32;7mInfo:\033[0m \033[1;32;3m'
 warning='\033[1;33;7mWarning:\033[0m \033[1;33;3m'
 danger='\033[1;31;7mDanger:\033[0m \033[1;31;3m'
 
