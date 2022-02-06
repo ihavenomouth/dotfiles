@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=X-Zim-CustomTool
+Version=1.0
+GenericName=
+Name=Eval (run command)
+Comment=Ejecuta una orden
+Exec=
+TryExec=
+Icon=
+MimeType=
+Terminal=false
+NoDisplay=false
+X-Zim-ExecTool=bash -c %t
+X-Zim-ReadOnly=false
+X-Zim-ShowInToolBar=false
+X-Zim-ShowInContextMenu=Text
+X-Zim-ReplaceSelection=true
+

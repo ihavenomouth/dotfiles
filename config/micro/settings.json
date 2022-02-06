@@ -1,10 +1,9 @@
 {
-    "cursorline": true,
-    "colorscheme": "dukedark-tc",
+    "autoclose": false,
+    "colorscheme": "material-tc",
     "eofnewline": false,
     "fastdirty": true,
     "ignorecase": false,
-    "matchbrace": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
     ],
@@ -12,5 +11,6 @@
     "softwrap": true,
     "tabsize": 3,
     "tabstospaces": true,
+    "cursorline": true,
     "termtitle": true
 }

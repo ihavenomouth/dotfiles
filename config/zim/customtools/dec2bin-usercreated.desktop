@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=X-Zim-CustomTool
+Version=1.0
+GenericName=
+Name=dec2bin
+Comment=Decimal a binario
+Exec=
+TryExec=
+Icon=
+MimeType=
+Terminal=false
+NoDisplay=false
+X-Zim-ExecTool=dec2bin %t
+X-Zim-ReadOnly=false
+X-Zim-ShowInToolBar=false
+X-Zim-ShowInContextMenu=Text
+X-Zim-ReplaceSelection=true
+
