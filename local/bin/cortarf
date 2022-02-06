@@ -6,7 +6,7 @@
 echo "$@" | xargs xclip-cutfile
 
 if [[ $? -eq 0 ]]; then
-   cecho info "Ficheros cortados: $@"
+   cecho info "Ficheros cortados: $*"
    cecho warning "Usa pegarf para no perder el fichero."
    cecho warning "No uses copiarf o cortarf sin pegarlo antes."
 fi

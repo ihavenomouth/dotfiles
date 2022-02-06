@@ -11,17 +11,17 @@ dir+=("Plugin_microzim  /home/javier/.config/micro/plug/microzim")
 dir+=("Clases           /home/javier/Prof/ZIM/0_Clases")
 dir+=("SOR              /home/javier/Prof/ZIM/0_Clases/3_SOR")
 
+#LINES no necesita un $ por estar en una op. aritmética
+opcion=$( whiptail --menu --title "Elige el destino" "Elija el directorio al que quiere ir" $LINES $COLUMNS $(( LINES - 8 )) ${dir[@]} 3>&1 1>&2 2>&3 )
 
-opcion=$( whiptail --menu --title "Elige el destino" "Elija el directorio al que quiere ir" $LINES $COLUMNS $(( $LINES - 8 )) ${dir[@]} 3>&1 1>&2 2>&3 )
-
-numElem=${#dir[@]}
+numElem=${#dir[@]} #nº de elementos del array dir[@] --> todos los elementos
 
 # Array Loop
-for (( i=0; i < $numElem; i++ ))
+for (( i=0; i < numElem; i++ ))  #numElem no tiene $ por ser un valor aritmético en una expresión
 do
    op=$( echo "${dir[$i]}" | cut -d " " -f1 ) 
-   if [[ $op == $opcion ]]; then
-      cd $(echo ${dir[$i]} | tr -s " " | cut -d " " -f2)
+   if [[ "$op" == "$opcion" ]]; then
+      cd "$(echo "${dir[$i]}" | tr -s " " | cut -d " " -f2)" || echo "Error al ejecutar el cd" || exit 1
       return
    fi
 done

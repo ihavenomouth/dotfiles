@@ -61,7 +61,7 @@ d='\033[1;31m'
 #redirección de variables: si $1 es "c", será como poner $c
 echo -en "${!1}"
 shift 
-echo -e $@'\033[0m'
+echo -e "$*"'\033[0m'
 exit 0
 
 

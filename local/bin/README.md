@@ -122,6 +122,9 @@ Usa `trans` para mostrar la definición de alguna palabra que desconozcamos. Bus
 
 Uso: `dicc harrowing`  
 
+El paquete usado se llama [translate-shell](https://github.com/soimort/translate-shell)
+
+
 ### trad
 
 Traduce las palabras que recibe usando Google translator.

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$1" == "--help" ];then
+if [ $# -eq 0 ] || [ "$1" == "--help" ];then
    echo "Convierte una página de un cuaderno Zim a Markdown."
    echo "Uso: zim [-o fichero.md ] página"
    echo
@@ -16,16 +16,15 @@ fi
 if [ "$1" == "-o" ];then
    [ $# -ne 3 ] && echo "Error: faltan parámetros (usa --help para ver la ayuda)." && exit 1
    salida=$2
-   pagina=$(dirname $3)"/"$(basename $3)
-   [ -d "$salida" ] && echo "Error: $salida es un directorio" && exit
-   
+   pagina=$(dirname "$3")"/"$(basename "$3")
+   [ -d "$salida" ] && echo "Error: $salida es un directorio" && exit   
 else
-   salida='~/Documentos/salida.md'
-   pagina=$(dirname $1)"/"$(basename $1)
+   salida="$HOME/Documentos/salida.md"
+   pagina=$(dirname "$1")"/"$(basename "$1")
 fi
 
 #zim --export --output=./salida.txt --overwrite --format=markdown ~/Prof/ZIM/1_Personal/Programación/Git.txt
-zim --export --output=$salida --overwrite --format=markdown $pagina
+zim --export --output="$salida" --overwrite --format=markdown "$pagina"
 
 if [ $? -eq 0 ];then
    echo "Se ha guardado $pagina en $salida"

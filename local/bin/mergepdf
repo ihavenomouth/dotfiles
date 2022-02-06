@@ -1,6 +1,6 @@
 #!/bin/bash
-[[ $1 == "--help" ]] && echo "Une todos los PDF de la carpeta actual" && exit 0
+[[ "$1" == "--help" ]] && echo "Une todos los PDF de la carpeta actual por orden alfabético." && exit 0
 
-[[ $(ls *.pdf 2>/dev/null | wc -l ) -eq 0 ]] && echo "No hay ficheros pdf que unir" 1>&2 && exit 1
+[[ $(ls ./*.pdf 2>/dev/null | wc -l ) -eq 0 ]] && echo "No hay ficheros pdf que unir" 1>&2 && exit 1
 
-gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf *.pdf
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf ./*.pdf
