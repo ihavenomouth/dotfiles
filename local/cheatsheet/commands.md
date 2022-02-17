@@ -10,14 +10,14 @@
 
 ## Portapapeles
 
-`pwd | xclip`      : Copia al portapales  
-`ls $(xclip -o)`   : Pega del portapaeles  
+`pwd | xclip`      : copia al portapales  
+`ls $(xclip -o)`   : pega del portapaeles  
 
 
 ## Bash
 
-`!!`               : Repite la última orden  
-`^e^am`            : Ídem cambiando e por am  
+`!!`               : repite la última orden  
+`^e^am`            : ídem cambiando e por am  
 `cp p.txt{,.bak}`  : cp p.txt p.txt.bak  
 `$_`               : último parámetro de la orden anterior
 
@@ -35,13 +35,14 @@ Montar una carpta de Windows (usa / en vez de \)
 ## Hardware
 `lshw`             : información sobre el hardware  
 `blkid`            : UUID de los discos  
-
+`lsblk`            : listado de los dispositivos de bloques  
+`lsblk -e 7`       : listado de los dispositivos excluyendo loops  
 
 ## Codificación
-`echo "Hola"| base64`         : codificación
-`echo "SG9sYQo=" | base64 -d` : descodificación
+`echo "Hola"| base64`         : codificación  
+`echo "SG9sYQo=" | base64 -d` : descodificación  
 
 ## Miscelánea
-`browse p.pdf`     : abre p.pdf (terminal) 
-`open p.pdf`       : abre p.pdf (GUI)
+`browse p.pdf`     : abre p.pdf (terminal)  
+`open p.pdf`       : abre p.pdf (GUI)  
 
