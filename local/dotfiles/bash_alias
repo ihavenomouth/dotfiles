@@ -1,5 +1,4 @@
 # Definiciones de alias
-alias cd..='cd ..'
 alias cd...='cd ../..'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -11,6 +10,7 @@ alias goto='. gotoaux'
 alias b='. b $@'
 
 #Evitando errores de tecleo
+alias cd..='cd ..'
 alias car='cat'
 
 #ejemplo: pwd | c --> al portapapeles

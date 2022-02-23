@@ -5,7 +5,7 @@
 `hostname -I`      : IP de la máquina  
 `nmcli device show`         : Mucha info de redes  
 `nmcli device show` + `Tab` : Muestra dispositivos  
-`ss -tulp`         : equivalente a netstat -putona  
+`ss -tulp`         : similar a netstat -putona con -n muestra puertos (no nombres de serv)  
 `ip -br a`         : dptvos e IP
 
 ## Portapapeles
