@@ -1,0 +1,57 @@
+#!/bin/bash
+
+
+function sustituirCaracteres(){
+    # Esto es un bashismo, pero funciona
+    sin=$(echo "${*//á/a}")
+    sin=$(echo "${sin//é/e}")
+    sin=$(echo "${sin//í/i}")
+    sin=$(echo "${sin//ó/o}")
+    sin=$(echo "${sin//ú/u}")
+
+    sin=$(echo "${sin//Á/A}")
+    sin=$(echo "${sin//É/E}")
+    sin=$(echo "${sin//Í/I}")
+    sin=$(echo "${sin//Ó/O}")
+    sin=$(echo "${sin//Ú/U}")    
+
+    sin=$(echo "${sin//Ñ/N}")
+    sin=$(echo "${sin//ñ/n}")
+    
+    sin=$(echo "${sin//Ü/U}")
+    sin=$(echo "${sin//ü/u}")
+    
+    sin=$(echo "${sin//Ç/C}")  
+    sin=$(echo "${sin//ç/c}")
+        
+    echo $sin
+}
+
+# Para evitar el la expansión de los caracteres como *
+set -f
+
+#Leemos la entrada por una tubería
+while read linea ; do 
+    sustituirCaracteres "$linea"
+done
+
+
+
+
+#USANDO SED ¿Más portable? ¿Más lento?
+#sinAcentos=$(echo "$*" | sed "s/á/a/g" )
+#sinAcentos=$(echo "$sinAcentos" | sed "s/é/e/g" )
+#sinAcentos=$(echo "$sinAcentos" | sed "s/í/i/g" )
+#sinAcentos=$(echo "$sinAcentos" | sed "s/ó/o/g" )
+#sinAcentos=$(echo "$sinAcentos" | sed "s/ú/u/g" )
+
+
+#sinAcentos=$(echo "$sinAcentos" | sed "s/Á/A/g" )
+#sinAcentos=$(echo "$sinAcentos" | sed "s/É/E/g" )
+#sinAcentos=$(echo "$sinAcentos" | sed "s/Í/I/g" )
+#sinAcentos=$(echo "$sinAcentos" | sed "s/Ó/O/g" )
+#sinAcentos=$(echo "$sinAcentos" | sed "s/Ú/U/g" )
+
+
+
+

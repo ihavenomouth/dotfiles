@@ -37,6 +37,7 @@ Montar una carpta de Windows (usa / en vez de \)
 `blkid`            : UUID de los discos  
 `lsblk`            : listado de los dispositivos de bloques  
 `lsblk -e 7`       : listado de los dispositivos excluyendo loops  
+`lsblk -f`         : Ídem mostrando los sistemas de archivos  
 
 ## Codificación
 `echo "Hola"| base64`         : codificación  

@@ -17,6 +17,7 @@
 * gotoaux
 * hr
 * mergepdf
+* sinCaracteresProblematicos
 * v
 * zim2md
 
@@ -162,6 +163,20 @@ El primero borra la línea actual, pero no dibuja la línea recta. El segundo s�
 
 Une todos los pdf que hay en el directorio desde el que se invoca en un único fichero.
 
+### sinCaracteresProblematicos
+
+Recibe líneas de texto por una tubería y realiza unas sustituciones de caracteres potencialmente problemáticos por otros. Por ejemplo, quita los acentos y diéresis de las vocales, cambia Ñ por N y Ç por ç.  
+
+Este script viene propiciado porque `tr` tiene dificultades para gestionar caracteres multibyte (UTF-8) y sólo se usa en contadas ocasiones (por ejemplo al ir a crear usuarios en bloque).  
+
+```
+echo "Hólá pingüíÑo çÁjón" | sinCaracteresProblematicos
+Hola pinguiNo cAjon
+```
+
+Hay que tener en cuenta que usa sustituciones en la shell (*bashismos*), pero comentado se puede encontrar al final la manera de realizar lo mismo usando `sed`.  
+
+TODO: Completar la funcionalidad para que funcione parecido a `cat`, que si recibe el nombre de un fichero coja las líneas a sustituir del fichero en vez de usar la tubería.  
 
 ### v
 
@@ -170,5 +185,6 @@ No se recomienda usar de momento. La idea es usar `xrandr` y otras utilidades pa
 ### zim2md
 
 Usa las opciones de exportación de Zim para exportar una página en formato Markdown.
+
 
 
