@@ -1,0 +1,12 @@
+#!/bin/bash
+IFS=$'\n'
+
+
+i=1
+for f in $(ls);do
+    inicio=$( echo "${f:0:5}" )
+    if [ "$inicio" == "2022-" ];then
+        mv "$f" "$i.mkv"
+        i=$(( $i + 1 ))
+    fi
+done

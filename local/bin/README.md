@@ -182,6 +182,26 @@ TODO: Completar la funcionalidad para que funcione parecido a `cat`, que si reci
 
 No se recomienda usar de momento. La idea es usar `xrandr` y otras utilidades para crear un monitor virtual que permita extender la pantalla y luego usar `VNC` para compartirla y poder visualizarla en una tablet o móvil. Lo he probado y funciona, pero me desconfigura la configuración del HDMI. Hay que darle una vuelta y sobre todo ver si merece la pena usarla.
 
+### vconvertirGif
+
+Un script muy sencillo, pero que habría que retocar para convertir un clip de vídeo a gif animado (8 fps).  
+
+FIXME: Hay que retocar el código del script para cambiar cualquier parámetro.
+
+### vcortar
+
+Muestra un menú que pregunta desde qué instante a qué instante se quiere extraer de un fichero de vídeo mayor.
+
+### vrenombrar
+
+Warning: No se recomienda su uso.  
+
+Es un script *sucio* que lo que hace es cambiar el nombre de los ficheros .mkv que se encuentren en el directorio actual para que se llamen 1.mkv, 2mkv 3.mkv, etc. Esto es útil para unir todos los clips de un vídeo grabado con OBS en un único fichero.
+
+### vunir
+
+Une todos los clips de vídeo que hay recogido en lista.txt en un único archivo de vídeo.
+
 ### zim2md
 
 Usa las opciones de exportación de Zim para exportar una página en formato Markdown.

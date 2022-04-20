@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo ------------------
+echo Vigila la duración
+echo ------------------
+ffmpeg -i 2.mkv -vf "fps=8" -ss 00:00:00.000 -pix_fmt rgb24 -r 10 -s 1280x720 -t 00:00:34.500 output.gif
