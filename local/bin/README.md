@@ -182,6 +182,12 @@ TODO: Completar la funcionalidad para que funcione parecido a `cat`, que si reci
 
 No se recomienda usar de momento. La idea es usar `xrandr` y otras utilidades para crear un monitor virtual que permita extender la pantalla y luego usar `VNC` para compartirla y poder visualizarla en una tablet o móvil. Lo he probado y funciona, pero me desconfigura la configuración del HDMI. Hay que darle una vuelta y sobre todo ver si merece la pena usarla.
 
+### vaumentarVelocidad
+
+Usa ffmpeg para recoger el fichero output.mp4 y crear dos copias del mismo un 10% más rápida y un 6% más rápida (sin modificar mucho el audio para que no suene más agudo como sí hace el OBS y otros reproductores).
+
+FIXME: Hay que retocar el código del script para cambiar cualquier parámetro. Lo ideal es que por parámetros se pudiera establecer el valor por el que se quiere acelerar el vídeo.
+
 ### vconvertirGif
 
 Un script muy sencillo, pero que habría que retocar para convertir un clip de vídeo a gif animado (8 fps).  
