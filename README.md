@@ -52,6 +52,9 @@ Los ficheros y directorios de este repositorio incluyen configuraciones de las h
       * bin
          * bin/b (figlet para mostrar texto grande)
          * bin/calc (bc para cálculos rápidos en la terminal)
+         * bin/bin2dec (convierte de binario a decimal)
+         * bin/dec2bin (convierte de decimal a binario)
+         * 
          * bin/cs (script para mostrar una cheatsheet)
          * bin/dicc (trans para traducciones desde la terminal, muestra mucha información, para algo conciso ver trad)
          * bin/g (busca en google usando w3m en la terminal)
@@ -62,9 +65,15 @@ Los ficheros y directorios de este repositorio incluyen configuraciones de las h
          * bin/zim2md (exporta un fichero en el formato de zim-wiki al de markdown)
          * bin/compartirpantalla (comparte la pantalla actual por vnc, para las clases)
          * bin/cecho (un echo con algo de color)
-         * bin/copiaf (copiar ficheros desde la terminal)
-         * bin/cortaf (cortar ficheros desde la terminal. Cuidado, es potencialmente peligroso)
-         * bin/pegaf (pegar ficheros desde la terminal)
+         * bin/copiarf (copiar ficheros desde la terminal)
+         * bin/cortarf (cortar ficheros desde la terminal. Cuidado, es potencialmente peligroso)
+         * bin/pegarf (pegar ficheros desde la terminal)
+         * bin/sinCaracteresProblematicos (elimina acentos, ñ, diéresis, etc)
+         * bin/tamImagen (redimensiona una imagen)
+         * bin/vaumentarVelocidad (aumenta la velocidad de un vídeo un 6% y un 10%)
+         * bin/vconvertirGif (convierte un clip de vídeo a Gif animado)
+         * bin/vcortar (crea un clip de vídeo recortando un vídeo más largo)
+         * bin/vunir (une varios clips de vídeo que están en lista.txt en uno sólo)
    * config --> .config
       * conky (2 ficheros de configuración, ambos leen notas de ~/notes.txt)
          * conky.conf (información en el centro)

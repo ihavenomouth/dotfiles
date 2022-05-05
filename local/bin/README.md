@@ -18,7 +18,13 @@
 * hr
 * mergepdf
 * sinCaracteresProblematicos
+* tamImagen
 * v
+* vaumentarVelocidad
+* vconvertirGif
+* vcortar
+* vrenombrar
+* vunir
 * zim2md
 
 ## Consideraciones
@@ -177,6 +183,12 @@ Hola pinguiNo cAjon
 Hay que tener en cuenta que usa sustituciones en la shell (*bashismos*), pero comentado se puede encontrar al final la manera de realizar lo mismo usando `sed`.  
 
 TODO: Completar la funcionalidad para que funcione parecido a `cat`, que si recibe el nombre de un fichero coja las líneas a sustituir del fichero en vez de usar la tubería.  
+
+### tamImagen
+
+Usa el paquete imagemagick para redimensionar una imagen (aumentarlo o disminuirlo). También puede ser usada para cambiar el formato del fichero.  
+
+USO: tamImagen 50 imgOrig.png imgRecortada.jpg`  
 
 ### v
 

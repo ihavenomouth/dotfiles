@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+function ayuda(){
+   echo "Cambia el tamaño de una imagen"
+   echo "USO: $0 porcentaje imagen imgreducida"
+   echo
+   echo "El porcentaje debe ser un número entero"
+   echo 
+   echo "Ejemplo:"
+   echo "$0 20 img.png imgreducida.jpg"
+}
+
+function mensaje(){
+   if [ $1 -eq 1 ];then
+      echo "Debe indicar 3 parámetros."
+      ayuda
+   elif [ $1 -eq 2 ];then
+      echo "Se ha producido un error al cambiar el tamaño de la imagen"
+      echo "¿Está instalado el paquete imagemagick?"
+   fi
+   exit $1
+}
+
+
+[ $# -eq 0 ] || [ "$1" == "--help" ] && ayuda && exit 0
+[ $# -ne 3 ] && mensaje 1
+
+
+convert  -resize "$1%" "$2" "$3"
+
+if [ $? -eq 0 ];then
+   echo "Cambiando el tamaño a $2"
+   echo "El tamaño de $3 es de un $1%"
+else
+   error 2
+fi
