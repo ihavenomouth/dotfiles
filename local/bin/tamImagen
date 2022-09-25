@@ -5,7 +5,9 @@ function ayuda(){
    echo "Cambia el tamaño de una imagen"
    echo "USO: $0 porcentaje imagen imgreducida"
    echo
-   echo "El porcentaje debe ser un número entero"
+   echo "El porcentaje debe ser un número entero e indica el tamaño"
+   echo "que tendrá la imagen resultante (en el ejemplo de abajo el "
+   echo "resultado será una imagen con un tamaño del 20% de la original)."
    echo 
    echo "Ejemplo:"
    echo "$0 20 img.png imgreducida.jpg"
