@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+function ayuda(){
+   echo "Prepara un video para ser usado en una TV Samsung"
+   echo "USO: $0 video.avi"
+   echo
+   echo "Las TV Samsung desde 2018 no incluyen decodificador de Xvid,"
+   echo "pero en lugar de recodificar el vídeo se puede intentar engañar "
+   echo "al sistema diciéndole que en realidad usa otro codec de vídeo."
+   echo 
+   echo "Ejemplo:"
+   echo "$0 video.avi  --> ook_video.avi"
+}
+
+
+[ $# -eq 0 ] || [ "$1" == "--help" ] && ayuda && exit 0
+[ $# -ne 1 ] && ayuda && exit 0
+
+ffmpeg -i "$1" -c copy -vtag FMP4 "ook_$1"
