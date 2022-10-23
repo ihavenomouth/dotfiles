@@ -10,7 +10,8 @@ function ayuda(){
    echo "al sistema diciéndole que en realidad usa otro codec de vídeo."
    echo 
    echo "Ejemplo:"
-   echo "$0 video.avi  --> ook_video.avi"
+   echo "$0 video.avi  --> video.avi"
+   echo "              --> video.avi.old"
 }
 
 
@@ -18,3 +19,5 @@ function ayuda(){
 [ $# -ne 1 ] && ayuda && exit 0
 
 ffmpeg -i "$1" -c copy -vtag FMP4 "ook_$1"
+mv "$1" "$1.old"
+mv "ook_$1" "$1"
