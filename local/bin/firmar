@@ -1,0 +1,11 @@
+#!/bin/bash
+echo Ficheros PDF:
+echo -------------
+ls *.pdf
+echo -n "Introduzca el fichero a firmar: "
+read fichero
+echo -n "Introduzca la clave del almacén de firmas: "
+read -s clave # -s para que no se vea la clave
+
+AutoFirma sign -store pkcs12:/home/javier/Prof/Burocracia/Certificados/certFNMT_hasta2024-07.pfx -i "$fichero" -o "fir_$fichero" -alias te-5316d45d-86fc-47d3-8129-60bbdaf67153 -xml -password "$clave"
+

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+function ayuda(){
+   echo "Descarga en mp4 todos los archivos de una lista de reproducción oculta"
+   echo "en youtube y los guarda en el directorio ~/Descargas/youtube/"
+   echo 
+	echo "Nota: No borra los vídeos de la lista de youtube."
+}
+
+[ "$1" == "--help" ] && ayuda && exit 0
+[ ! -d ~/Descargas/youtube/ ] && mkdir ~/Descargas/youtube/
+
+cd ~/Descargas/youtube/
+yt-dlp https://www.youtube.com/playlist?list=PLmwarrcFb3QeH9r1eSi-IBp86WjJq202p --format mp4 

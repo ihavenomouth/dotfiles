@@ -1,21 +1,19 @@
 # Órdenes interesantes
 
 ## Redes
-
 `hostname -I`      : IP de la máquina  
 `nmcli device show`         : Mucha info de redes  
 `nmcli device show` + `Tab` : Muestra dispositivos  
 `ss -tulp`         : similar a netstat -putona con -n muestra puertos (no nombres de serv)  
 `ip -br a`         : dptvos e IP
 
-## Portapapeles
 
+## Portapapeles
 `pwd | xclip`      : copia al portapales  
 `ls $(xclip -o)`   : pega del portapaeles  
 
 
 ## Bash
-
 `!!`               : repite la última orden  
 `^e^am`            : ídem cambiando e por am  
 `cp p.txt{,.bak}`  : cp p.txt p.txt.bak  
@@ -23,7 +21,6 @@
 
 
 ## Carpetas compartidas
-
 Montar una carpta de Windows (usa / en vez de \)  
 `mount -t cifs -o username=usuario //PC01/myshare /mnt.`  
 
@@ -48,6 +45,15 @@ Montar una carpta de Windows (usa / en vez de \)
 ## Miscelánea
 `browse p.pdf`     : abre p.pdf (terminal)  
 `open p.pdf`       : abre p.pdf (GUI)  
+`grep javier -C2 < /etc/passwd`    : muestra la línea y las dos anteriores y posteriores  
+`grep javier -A2 < /etc/passwd`    : muestra la línea y las dos posteriores  
+`grep javier -B2 < /etc/passwd`    : muestra la línea y las dos anteriores  
+`xmodmap -e 'pointer = 1 3 2'`     : El botón derecho del ratón ahora es el central
+
+
+## Paquetes
+`apt-cache policy pluma`  : desde dónde se instaló (repo. o archivo local)  
+`dpkg-reconfigure tzdata` : relanza la configuración de un paquete  
 
 
 ## Mis órdenes
