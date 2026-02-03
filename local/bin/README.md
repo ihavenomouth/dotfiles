@@ -14,6 +14,7 @@
 * dicc
 * trad
 * g
+* git-up
 * gotoaux
 * hr
 * mergepdf
@@ -142,6 +143,12 @@ Uso: `trad It was a harrowing night`
 ### g
 
 Busca en google lo que indiquemos usando el navegador web de terminal `w3m`. No especialmente interesante, pero alguna vez puede ser útil.  
+
+### git-up
+
+Actualiza un repositorio git local con los cambios realizados y los sube a Git Hub. Si el directorio
+en el que nos encontramos no es la raíz del proyecto irá subiendo en la estructura de ficheros
+hasta encontrarlo.
 
 ### gotoaux
 
