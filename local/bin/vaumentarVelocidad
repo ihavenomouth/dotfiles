@@ -1,10 +1,10 @@
 #!/bin/bash
 #Aumenta la velocidad del vídeo y audio un 10% y un 6%
 
-ffmpeg -i output.mp4 -map 0:v -c:v copy -bsf:v h264_mp4toannexb raw.h264
+#ffmpeg -i output.mp4 -map 0:v -c:v copy -bsf:v h264_mp4toannexb raw.h264
 
 ffmpeg -fflags +genpts -r 33 -i raw.h264 -i output.mp4 -map 0:v -c:v copy -map 1:a -af atempo=1.1 -movflags faststart output10.mp4
 
-ffmpeg -fflags +genpts -r 31.8 -i raw.h264 -i output.mp4 -map 0:v -c:v copy -map 1:a -af atempo=1.06 -movflags faststart output6.mp4
+#ffmpeg -fflags +genpts -r 31.8 -i raw.h264 -i output.mp4 -map 0:v -c:v copy -map 1:a -af atempo=1.06 -movflags faststart output6.mp4
 
 rm raw.h264

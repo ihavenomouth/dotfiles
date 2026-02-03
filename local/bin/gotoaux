@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #dir[0]="X Z"
-dir=("Programación      /home/javier/Prof/Personal/Prog")
+dir=("CLASES           /home/javier/clases/")
+dir+=("Programación     /home/javier/Prof/Personal/Prog")
 dir+=("Ansible-playbook /home/javier/Prof/Personal/Prog/ansibleplaybook")
 dir+=("Scripts          /home/javier/Prof/Personal/Prog/scripts")
 dir+=("x4               /home/javier/Prof/Personal/Prog/x11/x4")
@@ -10,8 +11,7 @@ dir+=("Micro            /home/javier/Prof/Personal/Prog/micro")
 dir+=("Plugin_microzim  /home/javier/.config/micro/plug/microzim")
 dir+=("Clases           /home/javier/Prof/ZIM/0_Clases")
 dir+=("SOR              /home/javier/Prof/ZIM/0_Clases/3_SOR")
-dir+=("React_node       /home/javier/React")
-dir+=("React_Babel      /home/javier/Prof/Personal/Prog/javascript/react")
+#dir+=("React_Babel      /home/javier/Prof/Personal/Prog/javascript/react")
 
 
 #LINES no necesita un $ por estar en una op. aritmética

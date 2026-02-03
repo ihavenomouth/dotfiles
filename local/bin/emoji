@@ -1,0 +1,44 @@
+#!/bin/bash
+
+function ayuda(){
+  echo "Muestra emojis en pantalla."
+  echo "Nº emojis: $numEmojis"
+  echo
+  echo "Uso: $0 [num]"
+  echo
+  echo "Argumentos:"
+  echo "   num     : número que indica el emoji que se quiere mostrar (empieza a contar por 0)"
+  echo "Ejemplo:"
+  echo "   $0 1    : muestra el segundo emoji"
+
+  exit 0
+}
+
+
+function listaEmojis(){
+   echo "Nº emojis: $numEmojis"
+   #echo ${arrEmojis[@]}
+   printf "%s\n\n" "${arrEmojis[@]}"
+   exit 0
+}
+
+
+
+
+#arrEmojis=("(˶ᵔ ᵕ ᵔ˶)" "◝(ᵔᗜᵔ)◜" "( • ᴗ - ) ✧" ". ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁." "-`♡´-" "₍^. .^₎Ⳋ" "¯\_(ツ)_/¯" "( ` ᴖ ´ )")
+arrEmojis=("↑↓←→♡" "_..··••··._" "•ᴗ•" "(˶ᵔ ᵕ ᵔ˶)" "◝(ᵔᗜᵔ)◜" "( • ᴗ - ) ✧" ". ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁." "₍^. .^₎Ⳋ" "¯\_(ツ)_/¯" ">ᴗ<" "˙◠˙" "( 'ᴖ' )" "(  •̀ - •́  )" "(·•᷄_•᷅ )" "────୨ৎ────" "🔥⚠️"❤️"🌟💀✨⭐👍")
+
+numEmojis=${#arrEmojis[@]}
+
+
+
+# Comprobaciones
+[ $# -eq 0 ] && listaEmojis
+[ "$1" == "--help" ] && ayuda
+! [[ "$1" =~ ^[0-9]+$ ]] && echo "Importante: el parámetro ha de ser un número." && echo && ayuda
+
+i=$1
+[ $1 -ge $numEmojis ] && echo "No hay tantos emojis, se muestra el primero." && i=0
+
+
+echo ${arrEmojis[$i]}

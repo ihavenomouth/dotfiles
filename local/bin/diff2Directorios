@@ -1,0 +1,6 @@
+#!/bin/bash
+
+[ $# -ne 2 ] && echo "Debe indicar 2 directorios como parámetro" && exit 0
+
+
+diff -rq $1 $2

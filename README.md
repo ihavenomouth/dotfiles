@@ -54,7 +54,8 @@ Los ficheros y directorios de este repositorio incluyen configuraciones de las h
          * bin/calc (bc para cálculos rápidos en la terminal)
          * bin/bin2dec (convierte de binario a decimal)
          * bin/dec2bin (convierte de decimal a binario)
-         * 
+         * bin/diff2Directorios (muestra las diferencias entre los contenidos de dos directorios)
+         * bin/emoji (lista una serie de emojis de texto)
          * bin/cs (script para mostrar una cheatsheet)
          * bin/dicc (trans para traducciones desde la terminal, muestra mucha información, para algo conciso ver trad)
          * bin/g (busca en google usando w3m en la terminal)
