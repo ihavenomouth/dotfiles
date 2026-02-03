@@ -1,0 +1,35 @@
+#!/bin/bash
+
+
+function ayuda(){
+  echo "El script actualiza el repositorio actual, realizando:"
+  echo "git add ."
+  echo 'git commit -m "primer_parámetro"'
+  echo "git push"
+  echo
+  echo "Uso: "
+  echo "   $(basename "$0") Comentario"
+  echo 
+  echo "Debe recibir un parámetro que será el comentario"
+  echo
+  echo "Si no está en el directorio raíz del proyecto lo buscará en "
+  echo "el directorio padre, si no lo encontrara en el abuelo, etc."
+  exit 0
+}
+
+function gitup(){
+  git add . && git commit -m "$1" && git push
+  exit 0
+}
+
+if [ $# -eq 0 ] || [ -z "$1" ] || [ "$1" == "--help" ];then
+  ayuda
+fi
+
+COMMENT="$*"
+[ -d ".git" ] && gitup "$COMMENT"
+
+while [ "$PWD" != "$HOME" ];do
+  cd ..
+  [ -d ".git" ] && gitup "$COMMENT"
+done
