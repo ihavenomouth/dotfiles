@@ -11,6 +11,7 @@
 * cortarf
 * pegarf
 * cs
+* d
 * dicc
 * trad
 * g
@@ -122,6 +123,11 @@ pegarf
 Si se ejecuta sin parámetros muestra todas las páginas que se pueden seleccionar.  
 
 Ejemplo de uso: `cs tmux`  
+
+
+### d
+Simplemente abre dolphin en el directorio actual (en una ventana nueva, en segundo plano, sin mostrar mensajes en la shell)
+```dolphin --new-window . & &>/dev/null```
 
 
 ### dicc

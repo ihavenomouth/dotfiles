@@ -19,3 +19,7 @@ alias p='xclip -o -sel clip'
 
 #Eliminando dispositivos de loops de lsblk
 alias lsblksinloop='lsblk -e 7'
+
+#Copia la salida de una orden al portapapeles: pwd | copiar
+alias copiar='xclip -selection clipboard'
+alias pegar='xclip -selection clipboard -out'
